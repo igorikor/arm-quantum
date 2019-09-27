@@ -137,12 +137,17 @@ body{
 }
 #log{
 	position: absolute;
-	margin-top: 64px;
-	margin-left: 72.5%;
+	overflow: auto;
+	margin-top: 2%;
+	margin-left: 2%;
 	border: 2px solid;
 	border-radius: 15px;
 	height: 600px;
-	width: 26%;
+	width: 95%;
+}
+#log_text{
+	margin-top:2%;
+	margin-left: 3%
 }
 #comand_send {
 	position: absolute;
