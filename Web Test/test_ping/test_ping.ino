@@ -1,4 +1,4 @@
-int LED = 2;
+int LED = 13;
 char data;
 byte input;
 
