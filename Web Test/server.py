@@ -14,7 +14,7 @@ def com_port():
 		return com
 	if request.method == 'GET':
 		return com
-	return(None)
+	return None
 
 #Обработка запросов
 @app.route("/", methods = ['POST','GET'])
@@ -25,6 +25,6 @@ def func():
 		return cmd
 	if request.method == 'GET':
 		return cmd
-	return (None)
+	return None
 
 app.run(debug=True)

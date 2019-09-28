@@ -1,7 +1,6 @@
 $(function(){
 
-	var ip = '127.0.0.1:5000'
-	var log_update = '1'
+	var ip = '127.0.0.1:5000';
 	var lib = {
 		'1':"Turn On"
 	}
@@ -15,6 +14,9 @@ $(function(){
 		var cmd = $("#cmd_text").val();
 		var log_update = lib[cmd];
 		$.post('http://'+ip+'/',{'cmd':cmd});
+		return log_update
 	})
+	
+	$("#log_text").text(log_update);
 
 })
