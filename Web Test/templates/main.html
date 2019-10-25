@@ -12,39 +12,29 @@
 		<h1 id="name">Arm-quantum</h1>
 		<div id="connect_bar">
 			<form>
-				<input type="text" id="com">
+				<input type="text" id="com" placeholder="Com-port">
 			</form>
 			<form float="left">
 				<input id="connect" type="submit" value="Connect">
 				<input id="ping" type="submit" value="Ping">
 			</form>
 			<div id="status">
-				
 				<p id="text_status">Disconnected</p>
-				
 			</div>
 		</div>
 	</header>
-	<div id="control">
-		
-		<div id="ctrl_panel">
-			<div id="rotate"></div>
-			<div id="default_cmd"></div>
-		</div>
-		<div id="camera">
-
-		</div>
+	<div id="scripts">
+		<from>
+			<input id="custom_command_text" type="input" placeholder="Put your command here">
+			<button id="custom_command">Send</button>
+		</from>
 	</div>
-	<div id="camera"></div>
-	<div id="log_bar">
-			<div id="log">
-				<p id="log_text"></p>
-			</div>
-			<form id="comand_send">
-				<input type="text" id="cmd_text">
-				<input type="submit" value="Send" id="cmd_send">
-			</form>
-		</div>
+	<div id="camera">
+		
+	</div>
+	<div id="ctrl_panel">
+		
+	</div>
 	<footer></footer>
 </body>
 </html>

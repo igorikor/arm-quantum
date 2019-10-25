@@ -22,6 +22,7 @@ body{
 	width:120px;
 	margin-top:9px;
 	margin-left:10px;
+	padding-left: 5px;
 }
 #connect{
 	float:left;
@@ -43,12 +44,6 @@ body{
 	margin-left: 6px;
 	margin-top: 8px;
 }
-#cmd1 {
-	width: 150px;
-	height: 27px;
-	border:1px solid ;
-}
-
 
 /*Шапка и подключение*/
 #name{
@@ -67,13 +62,14 @@ body{
 	float:left;
 }
 #status{
+	position: absolute;
+	left: 86%;
 	margin-top: 7px;
-	margin-right: 7px;
-	float:right;
 	background-color: white;
 	height:30px;
 	width:180px;
-	border: 1px solid ;
+	border: 0.5px solid;
+	border-radius: 5px;
 }
 #text_status{
 	text-align: center;
@@ -81,81 +77,57 @@ body{
 	font-size: 25px;
 }
 
-
-/*Панель управления*/
-#rotate{
-	position: inherit;
-	margin-top: 2%;
-	margin-left: 1.4%;
-	border-top-right-radius: 15px;
-	border-top-left-radius: 15px;
+/*Скрипты и префабы*/
+#scripts{
+	position:relative;
+	float:left;
 	border: 2px solid;
-	height: 68.5%; 
-	width: 96%;
+	border-radius: 10px;
+	height:500px;
+	width:28%;
+	margin-top:5px;
+	margin-left:16px;
 }
-#default_cmd{
-	margin-top: 489px;
-	margin-left: 1.4%;
-	position: absolute;
-	border: 2px solid;
-	border-bottom-right-radius: 15px;
-	border-bottom-left-radius: 15px;
-	height: 29%; 
-	width: 96%;	
+#custom_command_text{
+	position: relative;
+	float:left;
+	height:20px;
+	width:75%;
+	padding-left:5px;
+	margin-left:3%;
+	margin-top:5px;
 }
-#ctrl_panel{
-	position: absolute;
-	margin-top: 50px;
-	margin-left: 5px;
-	border: 2px solid;
-	border-radius: 15px;
-	height: 700px;
-	width: 30%;
+#custom_command{
+	position:relative;
+	margin-top:5px;
+	margin-left: 2px;
+	float:left;
+	height:24px;
+	width:50px;
 }
 
 
 /*Камера*/
 #camera{
-	position: absolute;
-	margin-left: 31%;
-	margin-top: 50px;
+	position: relative;
+	float:left;
 	border: 2px solid;
-	border-radius: 15px;
-	height: 700px;
+	border-radius: 10px;
+	margin-top: 5px;
+	height: 500px;
 	width: 40%;
+	margin-top:5px;
+	margin-left: 5px;
 }
 
-/*Логи и ручная отправка команд*/
-#log_bar{
-	position: absolute;
-	margin-left: 71.6%;
-	margin-top: 50px;
+/*Панель управления*/
+#ctrl_panel{
+	position: relative;
+	float:left;
 	border: 2px solid;
-	border-radius: 15px;
-	height: 700px;
-	width: 27.8%;
-}
-#log{
-	position: absolute;
-	overflow: auto;
-	margin-top: 2%;
-	margin-left: 2%;
-	border: 2px solid;
-	border-radius: 15px;
-	height: 600px;
-	width: 95%;
-}
-#log_text{
-	margin-top:2%;
-	margin-left: 3%
-}
-#comand_send {
-	position: absolute;
-	margin-top: 138%;
-	margin-left: 30%
-
-}
-#cmd_send{
-	width: 60px;
-	height: 30px;
+	border-radius: 10px;
+	height: 500px;
+	width: 28%;
+	margin-top: 5px;
+	margin-left: 5px;
 }
