@@ -1,30 +1,30 @@
 from flask import Flask,request,make_response
+#import ProgaVadima
 
 app = Flask(__name__)
+com = '/dev/ttyUSB0'
+command = ''
 
-com = ''
-cmd = '0'
+status = 0
 
-#Передача com порта к клиенту
-@app.route("/connect", methods = ['POST','GET'])
-def com_port():
+@app.route('/connect', methods=['POST','GET'])
+def get_com():
 	if request.method == 'POST':
 		global com
-		com = request.form['Port']
-		return com
+		com = request.form['com']
 	if request.method == 'GET':
+		print(com)
 		return com
-	return None
+	return ("")
 
-#Обработка запросов
-@app.route("/", methods = ['POST','GET'])
-def func():
+@app.route('/command', methods=['POST','GET'])
+def get_command():
 	if request.method == 'POST':
-		global cmd
-		cmd = request.form['cmd']
-		return cmd
-	if request.method == 'GET':
-		return cmd
-	return None
+		global command
+		command = request.form['command']
+		print(command)
+		return("")
+	elif request.method == 'GET':
+		return command
 
 app.run(debug=True)
