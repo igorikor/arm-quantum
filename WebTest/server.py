@@ -13,6 +13,7 @@ def get_com():
 	if request.method == 'POST':
 		global com
 		com = request.form['com']
+		print(com)
 	if request.method == 'GET':
 		print(com)
 		return com
