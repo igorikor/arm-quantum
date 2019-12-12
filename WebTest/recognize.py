@@ -18,6 +18,15 @@ Coefficient = 0.18# коэффицент сравнения
 Step=10# шаг в пикселях
 Compress=16 # сжатие изображения 
 
+dictionary = {
+    'возьми':'',
+    'зелёный':'green ',
+    'красный':'red ',
+    'синий':'blue ',
+    'куб':'cube ',
+    'шар':'sphere '
+} 
+
 
 # сделать снимок
 def photo():
@@ -30,6 +39,13 @@ def photo():
     cv.imshow    
     r2=cv.imread('test.png') 
     return r2        
+
+def translate(command):
+    request = ''
+    for i in range(len(command)):
+        command[i] = command[i].lower()
+        request += dictionary[command[i]]
+    return request
 
 # сравнение        
 def compare(r1, r2_2):
@@ -165,13 +181,14 @@ class Manipulator():
 if __name__ == '__main__':
     while True:
         try:
-            manipulator=Manipulator()
+            #manipulator=Manipulator()
             command = get('http://127.0.0.1:5000/command').text.split()
             request = translate(command)
+            print(request)
+            #x,y = manipulator.search_object(request)
+            sleep(2)
             #manipulator.show_object()
             #manipulator.show_diagram_photo()
-            print(request)
-            x,y = manipulator.search_object(request)
             #manipulator.connect()
             #manipulator.moveX(x)
             #manipulator.moveY(y)
