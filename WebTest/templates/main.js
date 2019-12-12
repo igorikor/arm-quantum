@@ -4,6 +4,7 @@ $(document).ready(function(){
 
 	var ip = '127.0.0.1:5000';
 	var mode = 1;
+	var com_port = 0;
 
 	var recognition = new webkitSpeechRecognition();
 	recognition.continuous = true;
@@ -23,7 +24,7 @@ $(document).ready(function(){
 	})
 
 	$("#connect").click(function(){
-		var com_port = $("#com").val();
+		$("#text_status").text("123");
 		$.post('http://'+ip+'/connect',{'com':com_port});
 		$("#log").append("Trying connecting");
 	})

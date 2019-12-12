@@ -72,7 +72,8 @@ textarea{
 	width:180px;
 }
 #text_status{
-	text-align: center;
+	text-align: left;
+	margin-left: 5px;
 	color: red;
 	font-family: 'Patua One';
 	font-size: 25px;

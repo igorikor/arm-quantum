@@ -4,8 +4,9 @@ from flask import Flask,request,make_response
 app = Flask(__name__)
 com = '/dev/ttyUSB0'
 command = ''
+type_command = ''
 
-status = 0
+lib = ['подать', 'возьми', 'брось', 'положи']
 
 @app.route('/connect', methods=['POST','GET'])
 def get_com():
@@ -22,7 +23,7 @@ def get_command():
 	if request.method == 'POST':
 		global command
 		command = request.form['command']
-		print(command)
+		print (command)
 		return("")
 	elif request.method == 'GET':
 		return command
